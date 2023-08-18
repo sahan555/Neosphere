@@ -1,0 +1,249 @@
+:root {
+  --primary-color: #f85a40;
+  --secondary-color: #1a2c79;
+  --font-color: #707070;
+  --white: #fff;
+  --heading-color: #060606;
+  --inter: "Inter", sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--inter);
+  color: var(--font-color);
+}
+a {
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  outline: 0;
+  box-shadow: 0;
+}
+figure img {
+  width: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-color);
+}
+.btn-white {
+  background: #ffffff;
+  border: 1px solid transparent;
+  color: var(--secondary-color);
+  transition: 0.5s all;
+  padding: 12px 30px;
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: 0.25rem;
+  text-transform: capitalize;
+}
+.btn-white:hover {
+  border-color: #ffffff;
+  background: transparent;
+  color: #ffffff;
+}
+.btn-khali {
+  background: transparent;
+  border: 1px solid var(--white);
+  color: var(--white);
+  transition: 0.5s all;
+  padding: 12px 30px;
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: 0.25rem;
+  text-transform: capitalize;
+}
+.btn-khali:hover {
+  border-color: #ffffff;
+  background: var(--white);
+  color: var(--secondary-color);
+}
+.section-padding {
+  padding: 6rem 0;
+}
+.title {
+  font-size: 35px;
+  line-height: 45px;
+  font-weight: 500;
+  color: var(--heading-color);
+}
+P {
+  font-size: 16px;
+  line-height: 28px;
+  color: var(--font-color);
+  letter-spacing: 0.4px;
+  padding: 0;
+  font-weight: 300;
+}
+@media (min-width: 1200px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    max-width: 1200px;
+  }
+}
+/* Navbar */
+header {
+  position: relative;
+}
+.navbar {
+  background: transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 79px;
+  z-index: 2;
+  padding: 1.6rem 1rem;
+}
+.navbar .navbar-brand {
+  font-size: 30px;
+  color: #fff;
+  font-weight: 600;
+}
+.navbar .navbar-brand i {
+  margin-right: 5px;
+}
+.navbar .nav-item {
+  margin-right: 26px;
+}
+.navbar .nav-link {
+  padding: 6px 12px;
+  font-size: 15px;
+  color: var(--white);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid transparent;
+  transition: all 0.5s;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: var(--white);
+}
+.navbar .nav-link:hover {
+  border-bottom: 1px solid #fff;
+}
+.navbar .nav-link.active {
+  color: var(--white);
+  border-bottom: 1px solid #fff;
+}
+.navbar form {
+  position: relative;
+}
+.navbar form input {
+  font-size: 15px;
+  color: var(--heading-color);
+  border: none;
+  background: #fff;
+  padding: 10px 35px 10px 15px;
+  width: 100%;
+  border-radius: 30px;
+}
+.navbar form .btn {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 11px;
+  outline: none;
+  border: 0;
+  box-shadow: none;
+  color: var(--primary-color);
+}
+.navbar .btn:focus {
+  outline: 0;
+}
+.navbar .color-change {
+  color: var(--white);
+  font-size: 24px;
+  padding: 0 10px;
+}
+/* banner */
+.banner {
+  min-height: 98vh;
+  background: #f9fafb
+    url(https://wp.w3layouts.com/dogscare/wp-content/themes/dogscare/assets/images/banner1.jpg)
+    no-repeat center top / cover;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.banner::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: linear-gradient(75deg, rgb(6 6 6 / 64%) 8%, transparent);
+  z-index: -1;
+}
+.banner h1 {
+  font-size: 50px;
+  line-height: 65px;
+  font-weight: 300;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+.banner h1 span {
+  display: block;
+}
+.banner h1 strong {
+  font-weight: 700;
+}
+.banner p {
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 16px;
+  color: var(--white);
+}
+.banner ul {
+  margin-top: 3rem;
+  margin-bottom: 0;
+}
+
+/* about */
+.about .about-info {
+  margin-bottom: 40px;
+}
+.about .about-info,
+.about ul {
+  padding-left: 15px;
+}
+.about li {
+  margin-right: 30px;
+}
+.about li:last-child {
+  margin-right: 0;
+}
+.about li i {
+  color: var(--primary-color);
+  font-size: 35px;
+}
+.about li h4 {
+  font-size: 1.25rem;
+  line-height: 28px;
+  margin: 0.5rem 0;
+}
+
+/* wedo */
+.wedo {
+    background-color: #fafafa;
+}
+.wedo-info {
+    text-align: center;
+    max-width: 770px;
+    margin: 0 auto;
+}
+.wedo-info p{
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
