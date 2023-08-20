@@ -236,28 +236,28 @@ header {
 
 /* wedo */
 .wedo {
-    background-color: #fafafa;
+  background-color: #fafafa;
 }
 .wedo-info {
-    text-align: center;
-    max-width: 770px;
-    margin: 0 auto;
+  text-align: center;
+  max-width: 770px;
+  margin: 0 auto 50px;
 }
-.wedo-info p{
-    font-size: 1.1rem;
-    line-height: 1.6;
+.wedo-info p {
+  font-size: 1.25rem;
+  line-height: 1.6;
 }
 .wedo .card {
   border: 0;
-  box-shadow: 0 1px 1px 0 rgba(10, 16, 34, .2);
+  box-shadow: 0 1px 1px 0 rgba(10, 16, 34, 0.2);
   background: #ffffff;
   border-radius: 15px;
 }
-.wedo .card:hover{
+.wedo .card:hover {
   transition: 0.3s all ease-in-out;
-  box-shadow: 0 10px 30px -5px rgba(10, 16, 34, .2);
+  box-shadow: 0 10px 30px -5px rgba(10, 16, 34, 0.2);
 }
-.wedo .card article{
+.wedo .card article {
   padding: 20px;
 }
 .wedo .card h3 {
@@ -275,11 +275,287 @@ header {
   font-size: 13px;
   transition: 0.4s all ease;
 }
-.review article h2{
+.review article h2 {
   font-weight: 600;
   margin-bottom: 15px;
 }
 .review article p {
   color: #333;
 }
-.review{}
+.review .review-icons {
+  list-style: none;
+  padding: 40px 0 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+}
+.review .review-icons li {
+  flex: 0 0 50%;
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.review .review-icons [class*="fa"] {
+  color: var(--secondary-color);
+  font-size: 30px;
+}
+.review .review-icons h5 {
+  font-size: 24px;
+  line-height: 34px;
+  margin-bottom: 0px;
+  font-weight: 600;
+}
+.review .review-clients li {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  gap: 2rem;
+}
+.review .review-clients li:not(:last-child) {
+  margin-bottom: 30px;
+}
+.review .review-clients li figure {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  flex: 0 0 11%;
+  overflow: hidden;
+}
+.review .review-clients figure img {
+  height: 100%;
+  width: 100%;
+}
+.review .review-clients p {
+  text-indent: 2rem;
+  position: relative;
+  padding-top: 20px;
+}
+.review .review-clients p::before {
+  position: absolute;
+  content: "\f10d";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  top: -6px;
+  left: -30px;
+  color: var(--secondary-color);
+  font-size: 24px;
+}
+.review .review-clients q::before {
+  display: none;
+}
+.review .review-clients h6 {
+  color: var(--secondary-color);
+  font-weight: 600;
+  font-size: 15px;
+}
+.gallery {
+  background-color: #fafafa;
+}
+.gallery article {
+  text-align: center;
+  max-width: 770px;
+  margin: 0 auto 50px;
+}
+.gallery article p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+.gallery a {
+  margin-right: -0.4%;
+}
+.dogs {
+}
+.dogs figure {
+  height: 387px;
+}
+.dogs figure img {
+  height: 100%;
+  object-fit: contain;
+}
+.dogs ul {
+  column-count: 2;
+  column-gap: 3rem;
+  list-style: none;
+  column-width: 50%;
+  margin-bottom: 0;
+}
+.dogs li:nth-child(n + 2) {
+  margin-top: 60px;
+}
+.dogs li [class*="fa-"] {
+  color: var(--primary-color);
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+.dogs li h4 {
+  font-size: 20px;
+  margin: 0 0 10px 0;
+  font-weight: 500;
+}
+.dogs li p {
+  margin-bottom: 0;
+}
+.lover {
+  background: fixed
+    url(https://wp.w3layouts.com/dogscare/wp-content/themes/dogscare/assets/images/bg.jpg)
+    no-repeat center;
+  background-size: cover;
+}
+.lover span {
+  color: #eee;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 20px;
+}
+.lover h2 {
+  font-size: 45px;
+  line-height: 55px;
+  color: #fff;
+  margin: 20px 0 50px;
+  font-weight: 500;
+  text-transform: capitalize;
+  max-width: 700px;
+}
+.news .card span {
+  font-size: 14px;
+  margin-bottom: 20px;
+  font-style: italic;
+  font-weight: 300;
+  border-bottom: none;
+  padding-bottom: 0px;
+  text-align: right;
+  display: block;
+  color: var(--secondary-color);
+}
+.news .card h3 {
+  font-size: 20px;
+  line-height: 27px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.news .card a {
+  color: var(--secondary-color);
+  font-weight: 400;
+}
+.news .card a:hover {
+  color: var(--primary-color);
+}
+.news .card [class*="fa-"] {
+  padding-left: 8px;
+  font-size: 10px;
+}
+footer {
+  background: #060606;
+  color: #d4d4d4;
+  padding-bottom: 40px !important;
+}
+footer .foot-logo {
+  margin-bottom: 1.5rem;
+}
+footer .foot-logo a {
+  color: var(--white);
+  font-size: 30px;
+  font-weight: 500;
+}
+footer .foot-logo [class*="fa-"] {
+  color: var(--primary-color);
+}
+footer p {
+  color: #d4d4d4;
+}
+footer h5 {
+  font-size: 19px;
+  line-height: 25px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: #fff;
+  text-transform: uppercase;
+}
+footer .footer-links {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  column-count: 2;
+  column-gap: 2rem;
+}
+footer .footer-links li a {
+  color: #d4d4d4;
+  transition: 0.3s ease;
+  padding: 7px 0;
+  display: inline-block;
+  font-size: 15px;
+}
+footer .footer-links li a:hover {
+  color: var(--primary-color);
+}
+footer .footer-links li a::before {
+  content: "\f105";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 10px;
+  padding-right: 10px;
+}
+footer form {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+footer form input {
+  width: 100%;
+  padding: 12px 12px;
+  font-size: 15px;
+  outline: none;
+}
+footer form button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: 0;
+  width: 15%;
+  background: var(--primary-color);
+  color: var(--white);
+  transition: 0.5s ease-in;
+}
+footer form button:hover {
+  opacity: 0.8;
+}
+.copyright {
+  border-top: 1px solid rgba(238, 238, 238, 0.16);
+  padding-top: 1.25rem;
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.copyright p {
+  font-size: 14x;
+  margin-bottom: 0;
+}
+.copyright p a {
+  color: var(--primary-color);
+}
+.copyright .social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1rem;
+}
+.copyright .social-icons a {
+  color: #fff;
+  width: 35px;
+  height: 35px;
+  background: rgb(41 41 41 / 27%);
+  display: inline-block;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 35px;
+}
+.copyright .social-icons a:hover {
+  background: var(--primary-color);
+}
