@@ -247,3 +247,39 @@ header {
     font-size: 1.1rem;
     line-height: 1.6;
 }
+.wedo .card {
+  border: 0;
+  box-shadow: 0 1px 1px 0 rgba(10, 16, 34, .2);
+  background: #ffffff;
+  border-radius: 15px;
+}
+.wedo .card:hover{
+  transition: 0.3s all ease-in-out;
+  box-shadow: 0 10px 30px -5px rgba(10, 16, 34, .2);
+}
+.wedo .card article{
+  padding: 20px;
+}
+.wedo .card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.wedo .card p {
+  font-size: 15px;
+  color: #333;
+}
+.wedo .card a {
+  color: var(--primary-color);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 13px;
+  transition: 0.4s all ease;
+}
+.review article h2{
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.review article p {
+  color: #333;
+}
+.review{}
