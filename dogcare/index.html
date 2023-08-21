@@ -1,440 +1,595 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="assets/lightGallery-master/dist/css/lightgallery-bundle.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link type="text/css" rel="stylesheet" href="assets/lightGallery-master/dist/css/lightgallery-bundle.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
-  <link rel="stylesheet" href="assets/css/style.css" />
-</head>
-
-<body>
-  <header>
-    <nav class="navbar navbar-expand-lg">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#"><i class="fa-solid fa-paw"></i>Dogs Care</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Pages
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li>
-                  <a class="dropdown-item" href="#">Another action</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-          </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" size="16" type="search" placeholder="Enter Keyword" aria-label="Search" />
-            <button class="btn" type="submit">
-              <i class="fa-solid fa-magnifying-glass fa-fade"></i>
-            </button>
-          </form>
-          <div class="color-change">
-            <i class="fa-regular fa-moon"></i>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"
+            ><i class="fa-solid fa-paw"></i>Dogs Care</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Services</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Pages
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Another action</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                size="16"
+                type="search"
+                placeholder="Enter Keyword"
+                aria-label="Search"
+              />
+              <button class="btn" type="submit">
+                <i class="fa-solid fa-magnifying-glass fa-fade"></i>
+              </button>
+            </form>
+            <div class="color-change">
+              <i class="fa-regular fa-moon"></i>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- header end -->
+    <section class="banner">
+      <div class="container">
+        <h1>
+          Providing Special Care
+          <span>For <strong>Your Pets!</strong></span>
+        </h1>
+        <p>We offer special services for special pets!</p>
+        <ul class="list-inline">
+          <li class="list-inline-item">
+            <a href="#!" class="btn btn-white">view our Services</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#!" class="btn btn-khali">Hire us</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="about section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <figure>
+              <img
+                src="https://wp.w3layouts.com/dogscare/wp-content/themes/dogscare/assets/images/about.jpg"
+                alt=""
+              />
+            </figure>
+          </div>
+          <div class="col-md-6">
+            <article class="about-info">
+              <h2 class="title">About Us</h2>
+              <p>
+                Orci urna. In et augue ornare, tempor massa in, luctus sapien.
+                Proin a diam et dui fermentum dolor molestie vel id neque. Donec
+                sed tempus enim, a congue risus. Pellen tesqu.
+              </p>
+            </article>
+            <ul class="d-flex">
+              <li class="list-inline-item">
+                <i class="fa-solid fa-paw fa-bounce"></i>
+                <h4>Our Mission</h4>
+                <p>
+                  In a diam et dui elit, orci urna vel id neque. Donec sed
+                  tempus enims.
+                </p>
+              </li>
+              <li class="list-inline-item">
+                <i class="fa-regular fa-hand-peace fa-bounce"></i>
+                <h4>Our Vision</h4>
+                <p>
+                  In a diam et dui elit, orci urna vel id neque. Donec sed
+                  tempus enims.
+                </p>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-    </nav>
-  </header>
-  <!-- header end -->
-  <section class="banner">
-    <div class="container">
-      <h1>Providing Special Care
-        <span>For <strong>Your Pets!</strong></span>
-      </h1>
-      <p>We offer special services for special pets! </p>
-      <ul class="list-inline">
-        <li class="list-inline-item"><a href="#!" class="btn btn-white">view our Services</a></li>
-        <li class="list-inline-item"><a href="#!" class="btn btn-khali">Hire us</a></li>
-      </ul>
-    </div>
-  </section>
-  <section class="about section-padding">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <figure>
-            <img src="https://wp.w3layouts.com/dogscare/wp-content/themes/dogscare/assets/images/about.jpg" alt="">
-          </figure>
-        </div>
-        <div class="col-md-6">
-          <article class="about-info">
-            <h2 class="title">About Us</h2>
-            <p>Orci urna. In et augue ornare, tempor massa in, luctus sapien. Proin a diam et dui fermentum dolor
-              molestie vel id neque. Donec sed tempus enim, a congue risus. Pellen tesqu.
-            </p>
-          </article>
-          <ul class="d-flex">
-            <li class="list-inline-item">
-              <i class="fa-solid fa-paw fa-bounce"></i>
-              <h4>Our Mission </h4>
-              <p>In a diam et dui elit, orci urna vel id neque. Donec sed tempus enims. </p>
-            </li>
-            <li class="list-inline-item">
-              <i class="fa-regular fa-hand-peace fa-bounce"></i>
-              <h4>Our Vision </h4>
-              <p>In a diam et dui elit, orci urna vel id neque. Donec sed tempus enims. </p>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="wedo section-padding">
-    <div class="container">
-      <article class="wedo-info">
-        <h2 class="title">What we do</h2>
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque, eaque ipsa quae ab
-          illo inventore. </p>
-      </article>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card">
-            <figure>
-              <img src="https://wp.w3layouts.com/dogscare/wp-content/themes/dogscare/assets/images/img1.jpg" alt="">
-            </figure>
-            <article>
-              <h3>Donec sed teus enime</h3>
-              <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-              </p>
-              <a href="#!">Read more</a>
-            </article>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <figure>
-              <img src="https://wp.w3layouts.com/dogscare/wp-content/themes/dogscare/assets/images/img2.jpg" alt="">
-            </figure>
-            <article>
-              <h3>It's enim ad minim aute</h3>
-              <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-              <a href="#!">Read more</a>
-            </article>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <figure>
-              <img src="https://wp.w3layouts.com/dogscare/wp-content/themes/dogscare/assets/images/img3.jpg" alt="">
-            </figure>
-            <article>
-              <h3>Ullamco laboris nisi uts</h3>
-              <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-              <a href="#!">Read more</a>
-            </article>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="review section-padding">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <article>
-            <h2>Happy Customers </h2>
-            <p>Lorem ipsum viverra feugiat. Pellen tesque libero ut justo, ultrices in ligula. Semper at tempufddfel.
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quae, fugiat.
-            </p>
-            <p>Semper at tempufddfel. Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quae, fugiat. Lorem
-              ipsum viverra feugiat. Pellen tesque libero ut justo, ultrices in ligula.
-            </p>
-          </article>
-          <ul class="review-icons">
-            <li>
-              <i class="fa-solid fa-users"></i>
-              <div class="icon-info">
-                <h5>100K+</h5>
-                <p>Customers</p>
-              </div>
-            </li>
-            <li>
-              <i class="fa-solid fa-thumbs-up"></i>
-              <div class="icon-info">
-                <h5>100%</h5>
-                <p>Satisfaction.</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-6">
-          <ul class="review-clients">
-            <li>
+    </section>
+    <section class="wedo section-padding">
+      <div class="container">
+        <article class="wedo-info">
+          <h2 class="title">What we do</h2>
+          <p>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium doloremque, eaque ipsa quae ab illo inventore.
+          </p>
+        </article>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
               <figure>
-                <img src="https://wp.w3layouts.com/dogscare/wp-content/themes/dogscare/assets/images/testi1.jpg" alt="">
+                <img
+                  src="https://wp.w3layouts.com/dogscare/wp-content/themes/dogscare/assets/images/img1.jpg"
+                  alt=""
+                />
               </figure>
               <article>
-                <p><q>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                  </q></p>
-                <h6>Mario Spev</h6>
+                <h3>Donec sed teus enime</h3>
+                <p>
+                  Sed do eiusmod tempor incididunt ut labore et dolore magna
+                  aliqua.
+                </p>
+                <a href="#!">Read more</a>
               </article>
-            </li>
-            <li>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
               <figure>
-                <img src="https://wp.w3layouts.com/dogscare/wp-content/themes/dogscare/assets/images/testi2.jpg" alt="">
+                <img
+                  src="https://wp.w3layouts.com/dogscare/wp-content/themes/dogscare/assets/images/img2.jpg"
+                  alt=""
+                />
               </figure>
               <article>
-                <p><q>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                    totam rem aperiam, eaque ipsa quae ab illo inventore.
-                  </q></p>
-                <h6>Petey Cru
-                </h6>
+                <h3>It's enim ad minim aute</h3>
+                <p>
+                  Sed do eiusmod tempor incididunt ut labore et dolore magna
+                  aliqua.
+                </p>
+                <a href="#!">Read more</a>
               </article>
-            </li>
-          </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <figure>
+                <img
+                  src="https://wp.w3layouts.com/dogscare/wp-content/themes/dogscare/assets/images/img3.jpg"
+                  alt=""
+                />
+              </figure>
+              <article>
+                <h3>Ullamco laboris nisi uts</h3>
+                <p>
+                  Sed do eiusmod tempor incididunt ut labore et dolore magna
+                  aliqua.
+                </p>
+                <a href="#!">Read more</a>
+              </article>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-  <section class="gallery section-padding">
-    <div class="container">
-      <article>
-        <h2>Our Gallery
-        </h2>
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque, eaque ipsa quae ab
-          illo inventore.
-        </p>
-      </article>
-      <div class="gallery-wrapper">
-        <div id="lightgallery">
-          <a href="https://wp.w3layouts.com/dogscare/wp-content/themes/dogscare/assets/images/g1.jpg"
-            data-lg-size="1600-2400">
-            <img alt="img1" src="https://wp.w3layouts.com/dogscare/wp-content/themes/dogscare/assets/images/g1.jpg" />
-          </a>
-          <a href="https://wp.w3layouts.com/dogscare/wp-content/themes/dogscare/assets/images/g2.jpg"
-            data-lg-size="1024-800">
-            <img alt="img2" src="https://wp.w3layouts.com/dogscare/wp-content/themes/dogscare/assets/images/g2.jpg" />
-          </a>
-          <a href="https://wp.w3layouts.com/dogscare/wp-content/themes/dogscare/assets/images/g3.jpg"
-            data-lg-size="1600-2400">
-            <img alt="img1" src="https://wp.w3layouts.com/dogscare/wp-content/themes/dogscare/assets/images/g3.jpg" />
-          </a>
-          <a href="https://wp.w3layouts.com/dogscare/wp-content/themes/dogscare/assets/images/g4.jpg"
-            data-lg-size="1600-2400">
-            <img alt="img1" src="https://wp.w3layouts.com/dogscare/wp-content/themes/dogscare/assets/images/g4.jpg" />
-          </a>
-          <a href="https://wp.w3layouts.com/dogscare/wp-content/themes/dogscare/assets/images/g8.jpg"
-            data-lg-size="1600-2400">
-            <img alt="img1" src="https://wp.w3layouts.com/dogscare/wp-content/themes/dogscare/assets/images/g8.jpg" />
-          </a>
-          
-          <!-- <a href="https://wp.w3layouts.com/dogscare/wp-content/themes/dogscare/assets/images/g9.jpg"
+    </section>
+    <section class="review section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <article>
+              <h2>Happy Customers</h2>
+              <p>
+                Lorem ipsum viverra feugiat. Pellen tesque libero ut justo,
+                ultrices in ligula. Semper at tempufddfel. Lorem ipsum dolor sit
+                amet consectetur adipisicing elit. Non quae, fugiat.
+              </p>
+              <p>
+                Semper at tempufddfel. Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Non quae, fugiat. Lorem ipsum viverra feugiat.
+                Pellen tesque libero ut justo, ultrices in ligula.
+              </p>
+            </article>
+            <ul class="review-icons">
+              <li>
+                <i class="fa-solid fa-users"></i>
+                <div class="icon-info">
+                  <h5>100K+</h5>
+                  <p>Customers</p>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-thumbs-up"></i>
+                <div class="icon-info">
+                  <h5>100%</h5>
+                  <p>Satisfaction.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <ul class="review-clients">
+              <li>
+                <figure>
+                  <img
+                    src="https://wp.w3layouts.com/dogscare/wp-content/themes/dogscare/assets/images/testi1.jpg"
+                    alt=""
+                  />
+                </figure>
+                <article>
+                  <p>
+                    <q
+                      >Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum dolore eu. Excepteur sint occaecat cupidatat
+                      non proident, sunt in culpa qui officia deserunt mollit
+                      anim id est laborum.
+                    </q>
+                  </p>
+                  <h6>Mario Spev</h6>
+                </article>
+              </li>
+              <li>
+                <figure>
+                  <img
+                    src="https://wp.w3layouts.com/dogscare/wp-content/themes/dogscare/assets/images/testi2.jpg"
+                    alt=""
+                  />
+                </figure>
+                <article>
+                  <p>
+                    <q
+                      >Sed ut perspiciatis unde omnis iste natus error sit
+                      voluptatem accusantium doloremque laudantium, totam rem
+                      aperiam, eaque ipsa quae ab illo inventore.
+                    </q>
+                  </p>
+                  <h6>Petey Cru</h6>
+                </article>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="gallery section-padding">
+      <div class="container">
+        <article>
+          <h2>Our Gallery</h2>
+          <p>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium doloremque, eaque ipsa quae ab illo inventore.
+          </p>
+        </article>
+        <div class="gallery-wrapper">
+          <div id="lightgallery">
+            <a
+              href="https://wp.w3layouts.com/dogscare/wp-content/themes/dogscare/assets/images/g1.jpg"
+              data-lg-size="1600-2400"
+            >
+              <img
+                alt="img1"
+                src="https://wp.w3layouts.com/dogscare/wp-content/themes/dogscare/assets/images/g1.jpg"
+              />
+            </a>
+            <a
+              href="https://wp.w3layouts.com/dogscare/wp-content/themes/dogscare/assets/images/g2.jpg"
+              data-lg-size="1024-800"
+            >
+              <img
+                alt="img2"
+                src="https://wp.w3layouts.com/dogscare/wp-content/themes/dogscare/assets/images/g2.jpg"
+              />
+            </a>
+            <a
+              href="https://wp.w3layouts.com/dogscare/wp-content/themes/dogscare/assets/images/g3.jpg"
+              data-lg-size="1600-2400"
+            >
+              <img
+                alt="img1"
+                src="https://wp.w3layouts.com/dogscare/wp-content/themes/dogscare/assets/images/g3.jpg"
+              />
+            </a>
+            <a
+              href="https://wp.w3layouts.com/dogscare/wp-content/themes/dogscare/assets/images/g4.jpg"
+              data-lg-size="1600-2400"
+            >
+              <img
+                alt="img1"
+                src="https://wp.w3layouts.com/dogscare/wp-content/themes/dogscare/assets/images/g4.jpg"
+              />
+            </a>
+            <a
+              href="https://wp.w3layouts.com/dogscare/wp-content/themes/dogscare/assets/images/g8.jpg"
+              data-lg-size="1600-2400"
+            >
+              <img
+                alt="img1"
+                src="https://wp.w3layouts.com/dogscare/wp-content/themes/dogscare/assets/images/g8.jpg"
+              />
+            </a>
+            <a
+              href="https://wp.w3layouts.com/dogscare/wp-content/themes/dogscare/assets/images/g7.jpg"
+              data-lg-size="1600-2400"
+            >
+              <img
+                alt="img1"
+                src="https://wp.w3layouts.com/dogscare/wp-content/themes/dogscare/assets/images/g7.jpg"
+              />
+            </a>
+            <!-- <a href="https://wp.w3layouts.com/dogscare/wp-content/themes/dogscare/assets/images/g9.jpg"
             data-lg-size="1600-2400">
             <img alt="img1" src="https://wp.w3layouts.com/dogscare/wp-content/themes/dogscare/assets/images/g9.jpg" />
           </a> -->
-          <a href="https://wp.w3layouts.com/dogscare/wp-content/themes/dogscare/assets/images/g5.jpg"
-            data-lg-size="1600-2400">
-            <img alt="img1" src="https://wp.w3layouts.com/dogscare/wp-content/themes/dogscare/assets/images/g5.jpg" />
-          </a>
-          <a href="https://wp.w3layouts.com/dogscare/wp-content/themes/dogscare/assets/images/g7.jpg"
-            data-lg-size="1600-2400">
-            <img alt="img1" src="https://wp.w3layouts.com/dogscare/wp-content/themes/dogscare/assets/images/g7.jpg" />
-          </a>
-          <a href="https://wp.w3layouts.com/dogscare/wp-content/themes/dogscare/assets/images/g6.jpg"
-            data-lg-size="1600-2400">
-            <img alt="img1" src="https://wp.w3layouts.com/dogscare/wp-content/themes/dogscare/assets/images/g6.jpg" />
-          </a>
+            <a
+              href="https://wp.w3layouts.com/dogscare/wp-content/themes/dogscare/assets/images/g5.jpg"
+              data-lg-size="1600-2400"
+            >
+              <img
+                alt="img1"
+                src="https://wp.w3layouts.com/dogscare/wp-content/themes/dogscare/assets/images/g5.jpg"
+              />
+            </a>
 
-        </div>
-
-      </div>
-    </div>
-  </section>
-  <section class="dogs section-padding">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <figure>
-            <img src="https://wp.w3layouts.com/dogscare/wp-content/themes/dogscare/assets/images/dog2.png" alt="">
-          </figure>
-        </div>
-        <div class="col-md-8">
-          <ul>
-            <li>
-              <i class="far fa-thumbs-up fa-beat"></i>
-              <h4>Dog Sitting
-              </h4>
-              <p>Lorem ante ipsum primis in faucibus orci luctus eted ultrices posuere.
-              </p>
-            </li>
-            <li>
-              <i class="fas fa-volume-up fa-beat"></i>
-              <h4>Dog Dentistry
-              </h4>
-              <p>Lorem ante ipsum primis in faucibus orci luctus eted ultrices posuere.
-              </p>
-            </li>
-            <li>
-              <i class="fas fa-paw fa-beat"></i>
-              <h4>Dog Walking
-              </h4>
-              <p>Lorem ante ipsum primis in faucibus orci luctus eted ultrices posuere.
-              </p>
-            </li>
-            <li>
-              <i class="fas fa-cut fa-beat"></i>
-              <h4>Dog Grooming
-              </h4>
-              <p>Lorem ante ipsum primis in faucibus orci luctus eted ultrices posuere.
-              </p>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="lover section-padding">
-    <div class="container">
-      <span>PET LOVERS
-      </span>
-      <h2>Our Team Is Filled With Highly Dedicated Pet Lovers
-      </h2>
-      <a href="" class="btn btn-white">Read more</a>
-    </div>
-  </section>
-  <section class="wedo news section-padding">
-    <div class="container">
-      <article class="wedo-info">
-        <h2>Latest news</h2>
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque, eaque ipsa quae ab
-          illo inventore.
-        </p>
-      </article>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card">
-            <figure>
-              <img src="https://wp.w3layouts.com/dogscare/wp-content/uploads/sites/49/2021/05/blog3.jpg" alt="">
-            </figure>
-            <article>
-              <span>May 5, 2021</span>
-              <h3>Hello world!</h3>
-              <a href="#!">Read more<i class="fa-solid fa-chevron-right"></i></a>
-            </article>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <figure>
-              <img src="https://wp.w3layouts.com/dogscare/wp-content/uploads/sites/49/2021/05/blog2.jpg" alt="">
-            </figure>
-            <article>
-              <span>May 5, 2021
-              </span>
-              <h3>How to keep your dog cool this summer</h3>
-              <a href="#!">Read more<i class="fa-solid fa-chevron-right"></i></a>
-            </article>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <figure>
-              <img src="https://wp.w3layouts.com/dogscare/wp-content/uploads/sites/49/2021/05/blog1.jpg" alt="">
-            </figure>
-            <article>
-              <span>May 5, 2021
-              </span>
-              <h3>Solution for grooming behavior problems</h3>
-              <a href="#!">Read more<i class="fa-solid fa-chevron-right"></i></a>
-            </article>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <footer class="section-padding">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="foot-logo">
-            <a href="#!">
-              <i class="fas fa-paw"></i>
-              Dog Care
+            <a
+              href="https://wp.w3layouts.com/dogscare/wp-content/themes/dogscare/assets/images/g6.jpg"
+              data-lg-size="1600-2400"
+            >
+              <img
+                alt="img1"
+                src="https://wp.w3layouts.com/dogscare/wp-content/themes/dogscare/assets/images/g6.jpg"
+              />
             </a>
           </div>
-          <p>Duis imperdiet sapien tortor, vitae congue diam auctor vitae. Aliquam eget turpis ornare, euismod ligul
-            aeget, enenatis dui.
-          </p>
         </div>
-        <div class="col-md-4">
-          <h5>CATEGORIES </h5>
-          <ul class="footer-links">
-            <li><a href="#!">Dog</a></li>
-            <li><a href="#!">Dog Care </a></li>
-            <li><a href="#!">Pets</a></li>
-            <li><a href="#!">Uncategorized</a></li>
-            <li><a href="#!">May 2021</a></li>
-            <li><a href="#!">April 2021</a></li>
-            <li><a href="#!">April 2021</a></li>
+      </div>
+    </section>
+    <section class="dogs section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <figure>
+              <img
+                src="https://wp.w3layouts.com/dogscare/wp-content/themes/dogscare/assets/images/dog2.png"
+                alt=""
+              />
+            </figure>
+          </div>
+          <div class="col-md-8">
+            <ul>
+              <li>
+                <i class="far fa-thumbs-up fa-beat"></i>
+                <h4>Dog Sitting</h4>
+                <p>
+                  Lorem ante ipsum primis in faucibus orci luctus eted ultrices
+                  posuere.
+                </p>
+              </li>
+              <li>
+                <i class="fas fa-volume-up fa-beat"></i>
+                <h4>Dog Dentistry</h4>
+                <p>
+                  Lorem ante ipsum primis in faucibus orci luctus eted ultrices
+                  posuere.
+                </p>
+              </li>
+              <li>
+                <i class="fas fa-paw fa-beat"></i>
+                <h4>Dog Walking</h4>
+                <p>
+                  Lorem ante ipsum primis in faucibus orci luctus eted ultrices
+                  posuere.
+                </p>
+              </li>
+              <li>
+                <i class="fas fa-cut fa-beat"></i>
+                <h4>Dog Grooming</h4>
+                <p>
+                  Lorem ante ipsum primis in faucibus orci luctus eted ultrices
+                  posuere.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="lover section-padding">
+      <div class="container">
+        <span>PET LOVERS </span>
+        <h2>Our Team Is Filled With Highly Dedicated Pet Lovers</h2>
+        <a href="" class="btn btn-white">Read more</a>
+      </div>
+    </section>
+    <section class="wedo news section-padding">
+      <div class="container">
+        <article class="wedo-info">
+          <h2>Latest news</h2>
+          <p>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium doloremque, eaque ipsa quae ab illo inventore.
+          </p>
+        </article>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <figure>
+                <img
+                  src="https://wp.w3layouts.com/dogscare/wp-content/uploads/sites/49/2021/05/blog3.jpg"
+                  alt=""
+                />
+              </figure>
+              <article>
+                <span>May 5, 2021</span>
+                <h3>Hello world!</h3>
+                <a href="#!"
+                  >Read more<i class="fa-solid fa-chevron-right"></i
+                ></a>
+              </article>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <figure>
+                <img
+                  src="https://wp.w3layouts.com/dogscare/wp-content/uploads/sites/49/2021/05/blog2.jpg"
+                  alt=""
+                />
+              </figure>
+              <article>
+                <span>May 5, 2021 </span>
+                <h3>How to keep your dog cool this summer</h3>
+                <a href="#!"
+                  >Read more<i class="fa-solid fa-chevron-right"></i
+                ></a>
+              </article>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <figure>
+                <img
+                  src="https://wp.w3layouts.com/dogscare/wp-content/uploads/sites/49/2021/05/blog1.jpg"
+                  alt=""
+                />
+              </figure>
+              <article>
+                <span>May 5, 2021 </span>
+                <h3>Solution for grooming behavior problems</h3>
+                <a href="#!"
+                  >Read more<i class="fa-solid fa-chevron-right"></i
+                ></a>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="foot-logo">
+              <a href="#!">
+                <i class="fas fa-paw"></i>
+                Dog Care
+              </a>
+            </div>
+            <p>
+              Duis imperdiet sapien tortor, vitae congue diam auctor vitae.
+              Aliquam eget turpis ornare, euismod ligul aeget, enenatis dui.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <h5>CATEGORIES</h5>
+            <ul class="footer-links">
+              <li><a href="#!">Dog</a></li>
+              <li><a href="#!">Dog Care </a></li>
+              <li><a href="#!">Pets</a></li>
+              <li><a href="#!">Uncategorized</a></li>
+              <li><a href="#!">May 2021</a></li>
+              <li><a href="#!">April 2021</a></li>
+              <li><a href="#!">April 2021</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h5>NEWSLETTER</h5>
+            <h5>SUBSCRIBE HERE NOW</h5>
+            <form>
+              <input type="email" placeholder="Email Address" />
+              <button type="submit">
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </form>
+            <p>
+              Subscribe to our mailing list and get updates to your email inbox.
+            </p>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>
+            © 2023 Dogs Care. All Rights Reserved | WordPress Theme by
+            <a href="#!">W3Layouts.</a>
+          </p>
+          <ul class="social-icons">
+            <li>
+              <a href="#!"><i class="fa-brands fa-facebook-f"></i></a>
+            </li>
+            <li>
+              <a href="#!"><i class="fa-brands fa-linkedin-in"></i></a>
+            </li>
+            <li>
+              <a href="#!"><i class="fa-brands fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="#!"><i class="fa-brands fa-google-plus-g"></i></a>
+            </li>
+            <li>
+              <a href="#!"><i class="fa-brands fa-github"></i></a>
+            </li>
           </ul>
         </div>
-        <div class="col-md-4">
-          <h5>NEWSLETTER</h5>
-          <h5>SUBSCRIBE HERE NOW
-          </h5>
-          <form>
-            <input type="email" placeholder="Email Address">
-            <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
-          </form>
-          <p>Subscribe to our mailing list and get updates to your email inbox.
-          </p>
-        </div>
       </div>
-      <div class="copyright">
-        <p>© 2023 Dogs Care. All Rights Reserved | WordPress Theme by <a href="#!">W3Layouts.</a>
-        </p>
-        <ul class="social-icons">
-          <li><a href="#!"><i class="fa-brands fa-facebook-f"></i></a></li>
-          <li><a href="#!"><i class="fa-brands fa-linkedin-in"></i></a></li>
-          <li><a href="#!"><i class="fa-brands fa-twitter"></i></a></li>
-          <li><a href="#!"><i class="fa-brands fa-google-plus-g"></i></a></li>
-          <li><a href="#!"><i class="fa-brands fa-github"></i></a></li>
-        </ul>
-      </div>
-    </div>
-  </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-    crossorigin="anonymous"></script>
-  <script src="https://kit.fontawesome.com/536c6717b5.js" crossorigin="anonymous"></script>
-  <script src="assets/lightGallery-master/dist/lightgallery.umd.js"></script>
-  <script src="assets/lightGallery-master/dist/plugins/thumbnail/lg-thumbnail.umd.js"></script>
-  <script src="assets/lightGallery-master/dist/plugins/zoom/lg-zoom.umd.js"></script>
-  <script src="assets/js/custom.js"></script>
-</body>
-
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/536c6717b5.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/lightGallery-master/dist/lightgallery.umd.js"></script>
+    <script src="assets/lightGallery-master/dist/plugins/thumbnail/lg-thumbnail.umd.js"></script>
+    <script src="assets/lightGallery-master/dist/plugins/zoom/lg-zoom.umd.js"></script>
+    <script src="assets/js/custom.js"></script>
+  </body>
 </html>
