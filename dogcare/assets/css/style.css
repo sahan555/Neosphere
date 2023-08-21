@@ -165,6 +165,10 @@ header {
   font-size: 24px;
   padding: 0 10px;
 }
+
+.navbar .color-change > .fa-regular {
+  -webkit-transition-duration: 0.8s;
+}
 /* banner */
 .banner {
   min-height: 98vh;
@@ -364,8 +368,8 @@ header {
 .gallery a {
   margin-right: -0.4%;
 }
-.dogs {
-}
+/* .dogs {
+} */
 .dogs figure {
   height: 387px;
 }
@@ -558,4 +562,30 @@ footer form button:hover {
 }
 .copyright .social-icons a:hover {
   background: var(--primary-color);
+}
+.dark {
+  background-color: #222222;
+}
+.dark .title {
+  color: var(--white);
+}
+.dark h1,.dark h2,.dark h3,.dark h4,.dark h5,.dark h6{
+  color: var(--white);
+}
+.dark p{
+  color: #b7b7b7 !important;
+}
+.dark .wedo,
+.dark .gallery {
+background: #0c0b0b;
+color: var(--white) !important;
+}
+.dark .news {
+  background-color: #222222;
+}
+.dark .news .card h3{
+  color: #060606;
+}
+:root .dark{
+  --secondary-color: #3a5cea;
 }
