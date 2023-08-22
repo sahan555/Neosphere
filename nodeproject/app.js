@@ -1,7 +1,9 @@
+const calc = require('./calculator');
 
 console.log(`Hello World`);
 
-const calc = require('./calculator');
+
+
 const multi = calc.multiply(8,5);
 const add = calc.add(50,10);
 const sub = calc.sub(50,10);
@@ -14,3 +16,4 @@ console.log(multi);
 console.log(div);
 console.log(`${add},${sub}`)
 console.log(`The bmi calculator of ${bmi}`)
+const promptJS = require('./prompt');
