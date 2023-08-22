@@ -583,8 +583,11 @@ color: var(--white) !important;
 .dark .news {
   background-color: #222222;
 }
-.dark .news .card h3{
+.dark .card h3{
   color: #060606;
+}
+.dark .card p {
+  color: #333333;
 }
 :root .dark{
   --secondary-color: #3a5cea;
