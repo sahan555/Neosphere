@@ -8,6 +8,23 @@ app.get("/", (req, res) => {
 app.get("/home", (req, res) => {
   res.send("hello worlsdsasadd");
 });
+app.get("/users", (req, res) => {
+    const users = [
+      {
+        id: 1,
+        name: "ramcha",
+        age: 23,
+      },
+      {
+        id: 2,
+        name: "shree ram",
+        age: 203,
+      },
+    ];
+    // const user = users.find((person)=> person.id === Number(req.params.id));
+  //   users.push(user);
+    res.json(users);
+  });
 app.get("/users/:id", (req, res) => {
   const users = [
     {
