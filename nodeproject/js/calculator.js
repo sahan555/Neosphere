@@ -25,4 +25,5 @@ function ReserveStr(str) {
   }
   return aaString;
 }
+
 module.exports = { multiply, divide, ReserveStr,add,sub,bmi};
