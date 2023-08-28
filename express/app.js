@@ -25,7 +25,7 @@ app.get("/users", (req, res) => {
   //   users.push(user);
     res.json(users);
   });
-app.get("/users/:id", (req, res) => {
+app.get("/users/:name", (req, res) => {
   const users = [
     {
       id: 1,
@@ -38,7 +38,7 @@ app.get("/users/:id", (req, res) => {
       age: 203,
     },
   ];
-  const user = users.find((person)=> person.id === Number(req.params.id));
+  const user = users.find((person)=> person.name === String(req.params.name));
 //   users.push(user);
   res.json(user);
 });
@@ -46,3 +46,22 @@ app.get("/users/:id", (req, res) => {
 app.listen(port, () => {
   console.log(`Sever listening on port ${port}`);
 });
+
+app.post("/postUser",(req,res)=>{
+  const users=[
+    {
+      id:1,
+      name:"yona",
+      age:22
+    }
+  ];
+  const user=[
+    {
+      id:2,
+      name:"sssss",
+      age:22
+    }
+  ];
+  users.push(user);
+  res.json(users);
+})
