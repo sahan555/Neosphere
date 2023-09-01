@@ -29,7 +29,7 @@ router.post('/products/savedata', (req, res) => {
 });
 
 
-// api to get all user data
+// api to get all product data
 
 
 module.exports = router;
