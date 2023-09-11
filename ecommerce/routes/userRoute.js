@@ -96,20 +96,7 @@ router.put('/users/async/update/:id',async (req,res) =>{
         res.status(500).json({msg:e.message,success:false});
     }
 });
-// router.get("/users/getdata/:id", (req, res) => {
-//     userModel.findById(req.params.id)
-//     .find()
-//     .then((data) => {
-//         console.log(data);
-//       res.json({ msg: "Data fetched", success: true, data });
-//     })
-//     .catch((err) => {
-//       res.status(500).json({ msg: err, success: false });
-//     });
-// });
-router.put('/users/update/:id',(req,res) =>{
 
-});
 
 
 module.exports = router;
