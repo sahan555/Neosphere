@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const productModel = require("../model/productModel");
 const userModel = require("../model/userModel");
-const domain = "http://localhost:3000";
+const domain = "http://localhost:5000";
 const auth = require("../config/auth.js");
 const uploadServices = require("../services/uploadServices");
 

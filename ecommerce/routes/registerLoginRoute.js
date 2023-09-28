@@ -7,13 +7,18 @@ const jwt = require("jsonwebtoken");
 // router for register
 router.post("/users/register", (req, res) => {
   const email = req.body.email;
+  const password = req.body.password;
+
   try {
     userModel.findOne({ email: email }).then((user_email) => {
       if (user_email != null) {
         res.status(400).json({ msg: "email already exists", success: false });
         return;
+      } else if (!password || !email) {
+        return res
+          .status(400)
+          .json({ msg: "Please enter email and password", success: false });
       } else {
-        const password = req.body.password;
         bcryptjs.hash(password, 10, (e, hashed_pw) => {
           if (e) {
             res.status(500).json({ msg: e, success: false });
@@ -45,7 +50,6 @@ router.post("/users/login", async (req, res) => {
     const user = await userModel.findOne({ email });
     if (!user) {
       res
-        .status(400)
         .json({ msg: "email or password is not correct", success: false });
       return;
     }
