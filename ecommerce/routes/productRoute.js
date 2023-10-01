@@ -2,19 +2,25 @@ const express = require("express");
 const router = express.Router();
 const productModel = require("../model/productModel");
 const userModel = require("../model/userModel");
+const categoryModel = require("../model/categoriesModel");
 const domain = "http://localhost:5000";
 const auth = require("../config/auth.js");
 const uploadServices = require("../services/uploadServices");
 
 // @route POST profile/create by taking the ref of the user
 // @desc Create a profile
+
 // @access Private
 router.post(
   "/product/create",
-  uploadServices.productImage.single("productImg"),
+  uploadServices.productImage.single("image"),
   auth.verifyUser,
   async (req, res) => {
     const data = req.body;
+    
+    const category = await categoryModel.find({name:data.category});
+    console.log(category);
+    const category_id = category[0]._id;
     const file = req.file;
     const admin = await userModel.findOne({ _id: req.userData._id });
     if (admin.role !== "admin") {
@@ -33,7 +39,7 @@ router.post(
       }
       const image = domain + "/public/product/" + file.filename;
       const product = new productModel({
-        category:req.userData._id,
+        category:category_id,
         name: data.name,
         price: data.price,
         details: data.details,

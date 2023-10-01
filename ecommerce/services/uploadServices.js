@@ -1,6 +1,6 @@
 // middlewares to upload files
 const multer = require("multer");
-const re = new RegExp("\\s+", "g"); // to remove space in img file path
+const re = new RegExp("\\s+", "g");
 
 // the function below is to eliminate white spaces from the file name
 function eliminateWhitespace(imageName) {
@@ -16,10 +16,10 @@ const filename = (req, file, next) => {
 };
 
 // const filename = (req, file, next) => {
-// let lastIndexof = file.originalname.lastIndexOf(".");
-// let originalname = file.originalname.substring(0, lastIndexof);
-// let ext = file.originalname.substring(lastIndexof);
-// next(null, `${originalname}-${Date.now()}${ext}`);
+//   let lastIndexof = file.originalname.lastIndexOf(".");
+//   let originalname = file.originalname.substring(0, lastIndexof);
+//   let ext = file.originalname.substring(lastIndexof);
+//   next(null, `${originalname}-${Date.now()}${ext}`);
 // };
 
 const filter = (req, file, next) => {
@@ -67,11 +67,11 @@ const profileImage = multer({
 });
 
 // const uploadCompanyVideo = multer({
-// storage: multer.diskStorage({
-// destination: companyVideoDestination,
-// filename,
-// }),
-// fileFilter: filter,
+//   storage: multer.diskStorage({
+//     destination: companyVideoDestination,
+//     filename,
+//   }),
+//   fileFilter: filter,
 // });
 
 module.exports = {

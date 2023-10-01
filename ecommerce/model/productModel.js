@@ -4,7 +4,7 @@ const productSchema = new Schema(
   {
     name: {
       type: String,
-      required: true,
+      required: false,
       trim: true,
       min: 3,
       max: 20,
@@ -12,13 +12,13 @@ const productSchema = new Schema(
     },
     price: {
       type: String,
-      required: true,
+      required: false,
       trim: true,
     },
-    details: {
+    description: {
       type: String,
     },
-    stockquantity: {
+    quantity: {
       type: String,
     },
     productImg: {
@@ -27,11 +27,8 @@ const productSchema = new Schema(
     category:{
       type:Schema.Types.ObjectId,
       ref:"category",
-      require:true,
     }
-    // profilePicture: {
-    //   type: String,
-    // },
+  
   },
   { timestamps: true }
 );
