@@ -17,13 +17,21 @@ router.post(
   auth.verifyUser,
   async (req, res) => {
     const data = req.body;
-
     const category = await categoryModel.find({ name: data.category });
-    console.log(category);
+    // store category_id to print from category
+    // console.log(category)
     const category_id = category[0]._id;
+    if (category[0] && category[0]._id) {
+      // Continue with your code here
+    } else {
+      console.error("Category or _id is undefined");
+      return;
+    }
+    
     const file = req.file;
     const admin = await userModel.findOne({ _id: req.userData._id });
     if (admin.role !== "admin") {
+      console.log("not authorized")
       return res
         .status(400)
         .json({ error: "You are not authorized to create category" });
