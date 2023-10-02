@@ -17,8 +17,8 @@ router.post(
   auth.verifyUser,
   async (req, res) => {
     const data = req.body;
-    
-    const category = await categoryModel.find({name:data.category});
+
+    const category = await categoryModel.find({ name: data.category });
     console.log(category);
     const category_id = category[0]._id;
     const file = req.file;
@@ -39,7 +39,7 @@ router.post(
       }
       const image = domain + "/public/product/" + file.filename;
       const product = new productModel({
-        category:category_id,
+        category: category_id,
         name: data.name,
         price: data.price,
         details: data.details,
@@ -59,7 +59,7 @@ router.post(
 // @access Private
 router.put(
   "/product/update/:id",
-  uploadServices.productImage.single("productImg"),
+  uploadServices.productImage.single("image"),
   auth.verifyUser,
   async (req, res) => {
     const data = req.body;
@@ -68,38 +68,47 @@ router.put(
     if (admin.role !== "admin") {
       return res
         .status(400)
-        .json({ error: "You are not authorized to create category" });
+        .json({ error: "You are not authorized to update prdouct" });
     }
+    // if (req.userData.role !== "admin") {
+    //   return res
+    //     .status(401)
+    //     .json({ error: "You are not authorized to update a product" });
+    // }
+
     try {
       const product = await productModel.findById(req.params.id);
       if (!product) {
         res.status(400).json({ msg: "product not found" });
         return;
       }
-      if (!file || file.length === 0) {
-        product.name = data.name ? data.name : product.name;
-        product.price = data.price ? data.price : product.price;
-        product.details = data.details ? data.details : product.details;
-        product.stockquantity = data.stockquantity
-          ? data.stockquantity
-          : product.stockquantity;
-        const updatedProduct = await product.save();
-        res.json({ msg: "product updated", success: true, updatedProduct });
-      } else {
-        const image = domain + "/public/product/" + file.filename;
-        product.name = data.name ? data.name : product.name;
-        product.price = data.price ? data.price : product.price;
-        product.details = data.details ? data.details : product.details;
-        product.stockquantity = data.stockquantity
-          ? data.stockquantity
-          : product.stockquantity;
-        product.productImg = image ? image : product.productImg;
+      // Update the product properties with the provided data
+      if (data.name) product.name = data.name;
+      if (data.price) product.price = data.price;
+      if (data.quantity) product.quantity = data.quantity;
+      if (data.description) product.description = data.description;
 
-        const updatedProduct = await product.save();
-        res.json({ msg: "product updated", success: true, updatedProduct });
+      // Update the image if a new image was uploaded
+      if (file) {
+        const oldImagePath = product.image;
+        const newImage = domain + "/public/product/" + req.file.filename;
+        product.image = newImage;
+
+        // Remove the old image file if it exists
+        if (fs.existsSync(oldImagePath)) {
+          fs.unlinkSync(oldImagePath);
+        }
       }
+
+      // Save the updated product to the database
+      await product.save();
+      return res.status(200).json({
+        msg: "Product updated successfully",
+        product,
+      });
     } catch (e) {
-      res.status(500).json({ msg: e.message, success: false });
+      console.error(e);
+      return res.status(500).json({ error: "Server Error" });
     }
   }
 );
@@ -107,7 +116,7 @@ router.put(
 // @route GET profile/get
 // @desc Get a profile
 // @access Private
-router.get("/product/get", auth.verifyUser, async (req, res) => {
+router.get("/product/get", async (req, res) => {
   try {
     const product = await productModel.find();
     if (!product) {
