@@ -95,6 +95,7 @@ router.put(
       if (data.price) product.price = data.price;
       if (data.quantity) product.quantity = data.quantity;
       if (data.description) product.description = data.description;
+      if (data.category) product.category = data.category;
 
       // Update the image if a new image was uploaded
       if (file) {
@@ -126,7 +127,7 @@ router.put(
 // @access Private
 router.get("/product/get", async (req, res) => {
   try {
-    const product = await productModel.find();
+    const product = await productModel.find().populate("category");
     if (!product) {
       return res.status(400).send("product not found");
     }
@@ -136,9 +137,9 @@ router.get("/product/get", async (req, res) => {
     res.status(500).send("Server Error");
   }
 });
-router.get("/product/get/:id", auth.verifyUser, async (req, res) => {
+router.get("/product/get/:id", async (req, res) => {
   try {
-    const product = await productModel.findById(req.params.id);
+    const product = await productModel.findById(req.params.id).populate("category");
     if (!product) {
       return res.status(400).send("product not found");
     }

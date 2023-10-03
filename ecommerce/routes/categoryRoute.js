@@ -37,5 +37,29 @@ router.post("/category/create", auth.verifyUser, async (req, res) => {
     return res.status(500).json({ error: "Server Error" });
   }
 });
+router.get("/category/get", async (req, res) => {
+  try {
+    const category = await categoryModel.find();
+    if (!category) {
+      return res.status(400).send("category not found");
+    }
+    res.json({ msg: "category fetched", success: true, category });
+  } catch (err) {
+    console.log(err);
+    res.status(500).send("Server Error");
+  }
+});
+router.get("/category/get/:id", async (req, res) => {
+  try {
+    const category = await categoryModel.findById(req.params.id);
+    if (!category) {
+      return res.status(400).send("category not found");
+    }
+    res.json({ msg: "category fetched", success: true, category });
+  } catch (err) {
+    console.log(err);
+    res.status(500).send("Server Error");
+  }
+});
 
 module.exports = router;
