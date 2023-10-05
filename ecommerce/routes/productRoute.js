@@ -63,7 +63,57 @@ router.post(
   }
 );
 // @route put profile/update by taking the ref of the user
-// @desc update a profile
+// @desc update a profile// delete product by product id
+router.delete("/Product/delete/:id", auth.verifyUser, async (req, res) => {
+  try {
+    const id = req.params.id;
+    const user = req.userData.role;
+    if (user !== "admin") {
+      return res
+        .status(401)
+        .json({ error: "You are not authorized to delete a product" });
+    }
+
+    const product = await Product.findByIdAndDelete(id);
+    res
+      .status(200)
+      .json({ msg: "Product deleted successfully", success: true, product });
+  } catch (e) {
+    res.status(500).json({ msg: e, success: false });
+  }
+});
+
+// Define a route for searching products
+// this search work only if the name match exact words
+
+router.get("/product/search", async (req, res) => {
+  try {
+    const { query } = req.query;
+
+    if (!query || query.trim() === "") {
+      return res
+        .status(400)
+        .json({ msg: "Please enter a valid query", success: false });
+    }
+
+    const regex = new RegExp(query, "i");
+    const products = await Product.find({ name: regex });
+
+    if (products.length === 0) {
+      return res.status(400).json({ msg: "No products found", success: false });
+    }
+
+    res.status(200).json({
+      msg: "Products searched successfully",
+      success: true,
+      products,
+    });
+  } catch (error) {
+    console.error("API Error:", error);
+    res.status(500).json({ msg: "Internal server error", success: false });
+  }
+});
+
 // @access Private
 router.put(
   "/product/update/:id",
@@ -154,18 +204,69 @@ router.get("/product/get/:id", async (req, res) => {
 // @route DELETE profile/delete
 // @desc Delete a profile
 // @access Private
-router.delete("/product/delete/:id", auth.verifyUser, async (req, res) => {
-  const admin = await userModel.findOne({ _id: req.userData._id });
-  if (admin.role !== "admin") {
-    return res
-      .status(400)
-      .json({ error: "You are not authorized to create category" });
-  }
+// router.delete("/product/delete/:id", auth.verifyUser, async (req, res) => {
+//   const admin = await userModel.findOne({ _id: req.userData._id });
+//   if (admin.role !== "admin") {
+//     return res
+//       .status(400)
+//       .json({ error: "You are not authorized to create category" });
+//   }
+//   try {
+//     const product = await productModel.findByIdAndDelete(req.params.id);
+//     res.json({ msg: "product deleted successfully", success: true, product });
+//   } catch (err) {
+//     res.status(500).json({ msg: err.message, success: false });
+//   }
+// });
+// delete product by product id
+router.delete("/Product/delete/:id", auth.verifyUser, async (req, res) => {
   try {
-    const product = await productModel.findByIdAndDelete(req.params.id);
-    res.json({ msg: "product deleted successfully", success: true, product });
-  } catch (err) {
-    res.status(500).json({ msg: err.message, success: false });
+    const id = req.params.id;
+    const user = req.userData.role;
+    if (user !== "admin") {
+      return res
+        .status(401)
+        .json({ error: "You are not authorized to delete a product" });
+    }
+
+    const product = await productModel.findByIdAndDelete(id);
+    res
+      .status(200)
+      .json({ msg: "Product deleted successfully", success: true, product });
+  } catch (e) {
+    res.status(500).json({ msg: e, success: false });
   }
 });
+
+// Define a route for searching products
+// this search work only if the name match exact words
+
+router.get("/product/search", async (req, res) => {
+  try {
+    const { query } = req.query;
+
+    if (!query || query.trim() === "") {
+      return res
+        .status(400)
+        .json({ msg: "Please enter a valid query", success: false });
+    }
+
+    const regex = new RegExp(query, "i");
+    const products = await productModel.find({ name: regex });
+
+    if (products.length === 0) {
+      return res.status(400).json({ msg: "No products found", success: false });
+    }
+
+    res.status(200).json({
+      msg: "Products searched successfully",
+      success: true,
+      products,
+    });
+  } catch (error) {
+    console.error("API Error:", error);
+    res.status(500).json({ msg: "Internal server error", success: false });
+  }
+});
+
 module.exports = router;
